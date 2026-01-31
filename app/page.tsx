@@ -9,6 +9,7 @@ import Experience from '@/components/experience'
 import Projects from '@/components/projects'
 import Skills from '@/components/skills'
 import ContactForm from '@/components/contact-form'
+import Gallery from '@/components/gallery'
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about')
@@ -22,7 +23,7 @@ export default function Home() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'projects', 'contact']
+      const sections = ['about', 'experience', 'projects', 'gallery', 'contact']
 
       for (const section of sections) {
         const element = document.getElementById(section)
@@ -115,6 +116,16 @@ export default function Home() {
                 }`}
             >
               Projects
+            </button>
+
+            <button
+              onClick={() => scrollToSection('gallery')}
+              className={`text-sm font-medium transition-colors ${activeSection === 'gallery'
+                ? 'text-foreground border-b-2 border-foreground pb-1'
+                : 'text-muted-foreground hover:text-foreground'
+                }`}
+            >
+              Gallery
             </button>
 
             <button
@@ -212,6 +223,19 @@ export default function Home() {
 
               <button
                 onClick={() => {
+                  scrollToSection('gallery')
+                  setMobileMenuOpen(false)
+                }}
+                className={`block w-full text-left px-4 py-2 rounded-md font-medium transition-colors ${activeSection === 'gallery'
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
+                  }`}
+              >
+                Gallery
+              </button>
+
+              <button
+                onClick={() => {
                   scrollToSection('contact')
                   setMobileMenuOpen(false)
                 }}
@@ -247,6 +271,11 @@ export default function Home() {
           <div className="mt-12 md:mt-16">
             <Skills />
           </div>
+        </section>
+
+        {/* Gallery Section */}
+        <section id="gallery" className="py-12 md:py-20 border-t border-border">
+          <Gallery />
         </section>
 
         {/* Contact Section */}
