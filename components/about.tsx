@@ -14,7 +14,7 @@ export default function About() {
         </h2>
         <div className="space-y-4 text-base md:text-lg text-muted-foreground leading-relaxed">
           <p className="animate-fade-in">
-            I'm a <span className="text-foreground font-semibold">Data Analyst</span> with hands-on experience delivering insightful dashboards and data models for business decision-making. Currently working as an <span className="text-foreground font-semibold">Associate Business Analyst at Analytical Instruments (PVT) LTD</span>, I specialize in transforming large datasets into actionable intelligence that improves efficiency and strategic clarity.
+            I'm a <span className="text-foreground font-semibold">Data Analyst</span> with hands-on experience delivering insightful dashboards and data models for business decision-making. Currently working as an <span className="text-foreground font-semibold">Associate Business Analyst at Analytical Instruments (PVT) LTD</span>,  I specialise in automating financial and management dashboards using Power BI Dataflows, reducing reporting time to enable near-real-time decision-making.
           </p>
           <p className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
             My journey includes a rewarding stint as a <span className="text-foreground font-semibold">Business Intelligence Intern at PickMe Digital Mobility Solutions</span>, where I conducted customer behaviour analyses on 1M+ user records, developed geospatial dashboards to detect fraudulent activity, and built 20+ interactive Power BI dashboards for operational KPIs. I also contributed to strategic expansion projects, providing real-time data insights for decision-making.
